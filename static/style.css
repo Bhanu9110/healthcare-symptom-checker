@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f9ff;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  padding: 10px 20px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.disclaimer {
+  color: red;
+  font-size: 14px;
+  margin-top: 20px;
+}

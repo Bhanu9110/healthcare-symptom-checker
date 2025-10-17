@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare Symptom Checker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Healthcare Symptom Checker</h1>
+    <form method="post" action="/check">
+      <input type="text" name="symptom" placeholder="Enter your symptoms..." required>
+      <button type="submit">Check</button>
+    </form>
+
+    {% if symptom %}
+      <h2>Results for: "{{ symptom }}"</h2>
+      <h3>Possible Conditions:</h3>
+      <ul>
+        {% for cond in conditions %}
+          <li>{{ cond }}</li>
+        {% endfor %}
+      </ul>
+
+      <h3>Recommended Next Steps:</h3>
+      <ul>
+        {% for step in next_steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ul>
+
+      <p class="disclaimer">{{ disclaimer }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
